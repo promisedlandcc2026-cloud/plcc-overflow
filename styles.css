@@ -18,8 +18,8 @@
   height: clamp(19rem, 85vw, 39rem);
   z-index: -1;
   background:
-    linear-gradient(180deg, transparent 82%, #04241a),
-    url('./assets/overflow-acacia.png') center top / 100% auto no-repeat;
+    linear-gradient(180deg, #04241a 7%, transparent 38%, transparent 79%, #04241a),
+    url('./assets/overflow-acacia-sunrise.png') center 3rem / max(100%, 48rem) auto no-repeat;
   mask-image: linear-gradient(90deg, transparent, black min(5vw, 3rem), black calc(100% - min(5vw, 3rem)), transparent);
 }
 .overflow-entry-header,
