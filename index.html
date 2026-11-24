@@ -3,36 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#04241a">
+  <meta name="theme-color" content="#062a1c">
   <title>Prayer Overflow | PLCC Sanctum</title>
+  <link rel="preload" as="image" href="./assets/overflow-acacia-960.webp" media="(max-width: 960px)">
+  <link rel="preload" as="image" href="./assets/overflow-acacia.webp" media="(min-width: 961px)">
   <link rel="stylesheet" href="./styles.css">
   <script src="./overflow.mjs" type="module"></script>
 </head>
 <body>
-  <div class="overflow-entry">
-    <header class="overflow-entry-header">
-      <div class="overflow-entry-brand">
-        <img src="./assets/prayer-emblem.png" alt="" width="276" height="140">
-        <div>PLCC <strong>Sanctum</strong></div>
-      </div>
-      <a id="back" class="overflow-entry-back" href="https://plcc-chat.vercel.app">
+  <div class="page">
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a id="back" class="back" href="https://plcc-chat.vercel.app">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7M5 12h14"/></svg>
-        Back to Ka Link
+        <span><span class="long">Back to </span>Ka Link</span>
       </a>
-    </header>
-    <main class="overflow-entry-card">
-      <p id="status" class="overflow-entry-status" role="status">Prayer overflow</p>
-      <h1 id="gathering">Ka Link</h1>
-      <p class="overflow-entry-subtitle">Prayer Overflow</p>
-      <p id="description" class="overflow-entry-description">When your gathering is full, open its overflow from Ka Link.</p>
-      <div class="overflow-entry-form">
-        <button id="join" type="button" hidden>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 14h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1zm18 0h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1z"/></svg>
-          Join Overflow
-        </button>
+      <div class="brand">
+        <img src="./assets/prayer-emblem.png" alt="" width="276" height="140">
+        <span class="brand-name">PLCC <strong>Sanctum</strong></span>
       </div>
-      <p class="overflow-entry-audio">Audio only · Join muted</p>
+      <span class="topbar-spacer" aria-hidden="true"></span>
+    </header>
+
+    <main class="card" aria-labelledby="gathering">
+      <p id="status" class="status" role="status">Prayer overflow</p>
+      <h1 id="gathering">Ka Link</h1>
+      <p class="subtitle">Prayer Overflow</p>
+      <p id="description" class="description">When your gathering is full, open its overflow from Ka Link.</p>
+
+      <button id="join" class="join" type="button" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 14h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1zm18 0h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1z"/></svg>
+        Join Overflow
+      </button>
+
+      <ul class="meta" aria-label="How overflow works">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 14h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1zm18 0h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1z"/></svg>
+          Audio only
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 2 20 20M18.9 13.1A7 7 0 0 0 19 12v-2M5 10v2a7 7 0 0 0 12 5M15 9.3V5a3 3 0 0 0-5.7-1.3M9 9v3a3 3 0 0 0 5.1 2.1M12 19v3"/></svg>
+          Join muted
+        </li>
+      </ul>
     </main>
+
+    <footer class="footer">Promised Land Christian Center</footer>
   </div>
 </body>
 </html>

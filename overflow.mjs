@@ -20,6 +20,7 @@ function verifiedJoinUrl(result) {
 if (channel) {
   back.href = `${kaLink}/community/chat/${encodeURIComponent(channel)}`;
   status.textContent = 'Checking availability';
+  status.dataset.state = 'checking';
 
   try {
     const lookup = new URL('/api/overflow', sanctum);
@@ -31,11 +32,13 @@ if (channel) {
     if (!url) throw new Error('No matching overflow');
     gathering.textContent = typeof result.roomName === 'string' && result.roomName.trim() ? result.roomName : 'Ka Link';
     status.textContent = 'Overflow ready';
+    status.dataset.state = 'ready';
     description.textContent = 'Join the overflow for this prayer gathering.';
     join.addEventListener('click', () => location.assign(url));
     join.hidden = false;
   } catch {
     status.textContent = 'Unavailable';
+    status.dataset.state = 'unavailable';
     description.textContent = 'Overflow is unavailable for this gathering. Return to Ka Link to try again.';
   }
 }
