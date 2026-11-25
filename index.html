@@ -1,55 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#062a1c">
-  <title>Prayer Overflow | PLCC Sanctum</title>
-  <link rel="preload" as="image" href="./assets/overflow-acacia-960.webp" media="(max-width: 960px)">
-  <link rel="preload" as="image" href="./assets/overflow-acacia.webp" media="(min-width: 961px)">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./overflow.mjs" type="module"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PLCC Ka Link</title>
+<script>
+  // Retired Nov 25 2026. Overflow now happens inside Ka Link: when a prayer room is full,
+  // members are moved into the overflow room automatically. Old links land back in Ka Link.
+  (function () {
+    var ch = new URLSearchParams(location.search).get('channel');
+    var base = 'https://plcc-chat.vercel.app/community/chat';
+    location.replace(ch ? base + '/' + encodeURIComponent(ch.trim()) : base);
+  })();
+</script>
 </head>
-<body>
-  <div class="page">
-    <div class="backdrop" aria-hidden="true"></div>
-
-    <header class="topbar">
-      <a id="back" class="back" href="https://plcc-chat.vercel.app">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7M5 12h14"/></svg>
-        <span><span class="long">Back to </span>Ka Link</span>
-      </a>
-      <div class="brand">
-        <img src="./assets/prayer-emblem.png" alt="" width="276" height="140">
-        <span class="brand-name">PLCC <strong>Sanctum</strong></span>
-      </div>
-      <span class="topbar-spacer" aria-hidden="true"></span>
-    </header>
-
-    <main class="card" aria-labelledby="gathering">
-      <p id="status" class="status" role="status">Prayer overflow</p>
-      <h1 id="gathering">Ka Link</h1>
-      <p class="subtitle">Prayer Overflow</p>
-      <p id="description" class="description">When your gathering is full, open its overflow from Ka Link.</p>
-
-      <button id="join" class="join" type="button" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 14h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1zm18 0h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1z"/></svg>
-        Join Overflow
-      </button>
-
-      <ul class="meta" aria-label="How overflow works">
-        <li>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 14h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1zm18 0h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a1 1 0 0 0 1-1z"/></svg>
-          Audio only
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 2 20 20M18.9 13.1A7 7 0 0 0 19 12v-2M5 10v2a7 7 0 0 0 12 5M15 9.3V5a3 3 0 0 0-5.7-1.3M9 9v3a3 3 0 0 0 5.1 2.1M12 19v3"/></svg>
-          Join muted
-        </li>
-      </ul>
-    </main>
-
-    <footer class="footer">Promised Land Christian Center</footer>
-  </div>
+<body style="font-family:system-ui,sans-serif;text-align:center;padding:3rem 1rem">
+  <p>Taking you to <a href="https://plcc-chat.vercel.app/community/chat">PLCC Ka Link</a>…</p>
 </body>
 </html>

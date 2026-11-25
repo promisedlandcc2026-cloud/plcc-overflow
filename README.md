@@ -1,7 +1,7 @@
-# PLCC Overflow
+# plcc-overflow (retired)
 
-Member entrance for Ka Link prayer overflow. Open the page with a `?channel=<ka-link-channel-id>` query to check overflow availability for that gathering.
+Retired Nov 25 2026. Members no longer use an overflow entrance page: when a Ka Link prayer
+room is full, Ka Link moves them into the overflow room automatically (served by plcc-sanctum).
 
-This first release uses Sanctum’s existing public lookup and listener room for audio and Bible reading. Ka Link still needs to be configured to send overflow traffic to this entrance. The Sanctum moderator dashboard continues to manage the audio bridge.
-
-Serve the repository root with any static web server. No build, API keys, or environment variables are required for the entrance.
+This page now only redirects old links into Ka Link (`?channel=` goes to that room).
+The Vercel project can be deleted once nobody uses the old link.
